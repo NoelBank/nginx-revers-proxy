@@ -110,6 +110,12 @@ After you done this! You are Pro with *NGINX* Repate the Step with follwing `ser
  - `magnolia.[username].neoskop.dev`
 change the ports here `proxy_pass http://localhost:[port]`
 
+After you changed it for alles subdomains u have to reastart nginx
+
+```
+sudo systemctl restart nginx
+```
+
 
 ### Additional Setup
 
