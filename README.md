@@ -127,4 +127,4 @@ After this u have to create a `error.html` in the `/var/www/html` folder. Feel f
 My Template: [Link to Codepen](https://codepen.io/noelbank/pen/LYyKWRb)
 
 
-Herzlichen Glückwunsch, du bist jetzt ein Nginx-Profi! 🍾🎉
+Congratulations, you are now a nginx pro! 🎉🎉🎉🎉
