@@ -94,7 +94,7 @@ after u done this we can go ahed with this ⚠️
         auth_basic_user_file /etc/nginx/.htpasswd;
     }
 
-    # only for frontend
+    # copy paste this only for port 3000
     location /assets {
         proxy_pass http://localhost:3000/assets;
         proxy_http_version 1.1;
@@ -108,6 +108,7 @@ after u done this we can go ahed with this ⚠️
 After you done this! You are Pro with *NGINX* Repate the Step with follwing `server_names`!
  - `storybook.[username].neoskop.dev`
  - `magnolia.[username].neoskop.dev`
+change the ports here `proxy_pass http://localhost:[port]`
 
 
 ### Additional Setup
