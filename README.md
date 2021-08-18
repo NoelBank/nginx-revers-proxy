@@ -1,4 +1,4 @@
-## How to Setup Nginx as Reverse Proxy for Team enercity ⚡️
+## How to Setup Nginx as Reverse Proxy ⚡️
 
 ### Inital Setup (NGINX) 📟
 
