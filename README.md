@@ -2,19 +2,21 @@
 
 ### Inital Setup (NGINX) 📟
 
+Install 
 ```
 sudo apt-get update
 sudo apt-get install nginx
+```
 
-# Start nginx
+Start and Check Nginx
+```
 sudo systemctl start nginx
 sudo systemctl enable nginx
 sudo systemctl status nginx
-# now in browser should nothing happen :)
-# we have to install certbot
 ```
+now in browser should nothing happen 😭! We have to install certbot!
 
-wait we need password protection for our page! 🤯
+Wait we need password protection for our page! 🤯
 
 ```
 sudo apt-get update
@@ -27,32 +29,38 @@ sudo htpasswd /etc/nginx/.htpasswd testuser
 
 cat /etc/nginx/.htpasswd
 
-Output
-[username]:$apr1$lzxsIfXG$tmCvCfb49vpPFwKGVsuYz.
-testuser:$apr1$p1E9MeAf$kiAhneUwr.MhAE2kKGYHK.
+```
 
+*Output*
+```
+[username]:$apr1$lzxsIfXG$tmCvCfb49vpP.....
+testuser:$apr1$p1E9MeAf$kiAhneUwr.......
 ```
 
 Yes! 👏🏻 we finished first setup!
 
 ### Initial Setup (Certbot) 📩
 
+Install Certbot
 ```
 sudo snap install core; sudo snap refresh core
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
+```
 
-
+Create the first Cert
+```
 # create cert
 sudo certbot --nginx
 # - [username].neoskop.dev
 # - do the register stuff...
+```
 
-# create orher certs
+Create the Certs for the Subdomains
+```
 sudo certbot run -d storybook.[username].neoskop.dev
 sudo certbot run -d magnolia.[username].neoskop.dev
 ```
-
 Yes! 👏🏻 we finished the second setup!
 
 
