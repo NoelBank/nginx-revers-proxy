@@ -116,6 +116,15 @@ After you changed it for alles subdomains u have to reastart nginx
 sudo systemctl restart nginx
 ```
 
+### Additional Enercity Setup
+
+### Configure .env file
+
+1. Create a copy of the file .env.example with the name .env
+2. Assign ASSETS_PATH with your remote host (ex. https://xxx.neoskop.dev)
+after that, you don't need ngrok anymore
+
+
 
 ### Additional Setup
 
