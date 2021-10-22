@@ -1,5 +1,7 @@
 ## How to Setup Nginx as Reverse Proxy ⚡️
 
+### Background Story (German) [Remote-Development mit Visual Studio Code](https://www.neoskop.de/blog/remote-development)
+
 ### Inital Setup (NGINX) 📟
 
 Install 
