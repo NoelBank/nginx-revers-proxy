@@ -96,7 +96,7 @@ after u done this we can go ahed with this ⚠️
         auth_basic_user_file /etc/nginx/.htpasswd;
     }
 
-    # copy paste this only for port 3000
+    # copy paste this part only for port 3000 ->
     location /assets {
         proxy_pass http://localhost:3000/assets;
         proxy_http_version 1.1;
@@ -105,6 +105,17 @@ after u done this we can go ahed with this ⚠️
         proxy_set_header Host $host;
         proxy_cache_bypass $http_upgrade;
     }
+    
+    location /json-data {
+        proxy_pass http://localhost:3000/json-data;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+    
+    # <-
 ```
 
 After you done this! You are Pro with *NGINX* Repate the Step with follwing `server_names`!
